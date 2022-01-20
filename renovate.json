@@ -1,5 +1,7 @@
 {
+  "separateMajorMinor": true,
   "extends": [
+    ":preserveSemverRanges",
     "config:base"
   ]
 }
