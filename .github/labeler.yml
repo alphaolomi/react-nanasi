@@ -1,3 +1,6 @@
+dependencies:
+  - yarn.lock
+
 test:
   - src/test/**/*
   - src/types/tests/**/*
