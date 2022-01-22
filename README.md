@@ -1,5 +1,7 @@
 # TSDX React w/ Storybook User Guide
 
+![npm](https://img.shields.io/npm/v/react-nanasi?style=flat-square) ![npm bundle size](https://img.shields.io/bundlephobia/min/react-nanasi?style=flat-square) [![Node.js Package](https://github.com/alphaolomi/react-nanasi/actions/workflows/npm-publish.yml/badge.svg)](https://github.com/alphaolomi/react-nanasi/actions/workflows/npm-publish.yml) [![CI](https://github.com/alphaolomi/react-nanasi/actions/workflows/main.yml/badge.svg)](https://github.com/alphaolomi/react-nanasi/actions/workflows/main.yml) [![size](https://github.com/alphaolomi/react-nanasi/actions/workflows/size.yml/badge.svg)](https://github.com/alphaolomi/react-nanasi/actions/workflows/size.yml)
+
 Congrats! You just saved yourself hours of work by bootstrapping this project with TSDX. Let’s get you oriented with what’s here and how to use it.
 
 > This TSDX setup is meant for developing React component libraries (not apps!) that can be published to NPM. If you’re looking to build a React-based app, you should use `create-react-app`, `razzle`, `nextjs`, `gatsby`, or `react-static`.
