@@ -1,0 +1,16 @@
+test:
+  - src/test/**/*
+  - src/types/tests/**/*
+
+core:
+  - src/**/*
+
+style:
+  - src/css/**/*
+
+story:
+  - .storybook/*
+  - stories/*
+
+TypeScript:
+  - types/**/*
