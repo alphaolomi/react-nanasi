@@ -1,4 +1,5 @@
 {
+  "name": "react-nanasi",
   "version": "0.1.0",
   "license": "MIT",
   "main": "dist/index.js",
@@ -7,22 +8,17 @@
     "dist",
     "src"
   ],
-  "engines": {
-    "node": ">=10"
-  },
   "scripts": {
-    "start": "tsdx watch",
+    "analyze": "size-limit --why",
     "build": "tsdx build",
-    "test": "tsdx test --passWithNoTests",
+    "build-storybook": "build-storybook",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "lint": "tsdx lint",
     "prepare": "tsdx build",
     "size": "size-limit",
-    "analyze": "size-limit --why",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
-  },
-  "peerDependencies": {
-    "react": ">=16"
+    "test": "tsdx test --passWithNoTests"
   },
   "husky": {
     "hooks": {
@@ -35,19 +31,6 @@
     "singleQuote": true,
     "trailingComma": "es5"
   },
-  "name": "react-nanasi",
-  "author": "Alpha Olomi",
-  "module": "dist/react-nanasi.esm.js",
-  "size-limit": [
-    {
-      "path": "dist/react-nanasi.cjs.production.min.js",
-      "limit": "10 KB"
-    },
-    {
-      "path": "dist/react-nanasi.esm.js",
-      "limit": "10 KB"
-    }
-  ],
   "devDependencies": {
     "@babel/core": "^7.16.10",
     "@size-limit/preset-small-lib": "^7.0.5",
@@ -67,5 +50,21 @@
     "tsdx": "^0.14.1",
     "tslib": "^2.3.1",
     "typescript": "^4.5.5"
-  }
+  },
+  "peerDependencies": {
+    "react": ">=16"
+  },
+  "engines": {
+    "node": ">=10"
+  },
+  "size-limit": [
+    {
+      "path": "dist/react-nanasi.cjs.production.min.js",
+      "limit": "10 KB"
+    },
+    {
+      "path": "dist/react-nanasi.esm.js",
+      "limit": "10 KB"
+    }
+  ]
 }

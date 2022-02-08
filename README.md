@@ -1,183 +1,81 @@
-# TSDX React w/ Storybook User Guide
+# Nanasi UI 🍍 | Build React Apps with Speed
 
 ![npm](https://img.shields.io/npm/v/react-nanasi?style=flat-square) ![npm bundle size](https://img.shields.io/bundlephobia/min/react-nanasi?style=flat-square) [![Node.js Package](https://github.com/alphaolomi/react-nanasi/actions/workflows/npm-publish.yml/badge.svg)](https://github.com/alphaolomi/react-nanasi/actions/workflows/npm-publish.yml) [![CI](https://github.com/alphaolomi/react-nanasi/actions/workflows/main.yml/badge.svg)](https://github.com/alphaolomi/react-nanasi/actions/workflows/main.yml) [![size](https://github.com/alphaolomi/react-nanasi/actions/workflows/size.yml/badge.svg)](https://github.com/alphaolomi/react-nanasi/actions/workflows/size.yml)
 
-Congrats! You just saved yourself hours of work by bootstrapping this project with TSDX. Let’s get you oriented with what’s here and how to use it.
+Nanasi UI provides a set of simple, reusable, and composable React components that make it super easy to create websites and apps.
 
-> This TSDX setup is meant for developing React component libraries (not apps!) that can be published to NPM. If you’re looking to build a React-based app, you should use `create-react-app`, `razzle`, `nextjs`, `gatsby`, or `react-static`.
+## Looking for the documentation? 📚
 
-> If you’re new to TypeScript and React, checkout [this handy cheatsheet](https://github.com/sw-yx/react-typescript-cheatsheet/)
+Latest version => wip
 
-## Commands
+## Features 🚀
 
-TSDX scaffolds your new library inside `/src`, and also sets up a [Parcel-based](https://parceljs.org) playground for it inside `/example`.
+- Ease of Styling with Tailwind CSS: Nanasi UI are built using Tailwind CSS.
+- Flexible & composable: Nanasi UI components are built on top of a React UI
+- [wip] Accessible. Nanasi UI components follow the WAI-ARIA guidelines specifications
+  and have the right `aria-*` attributes.
+- [wip] Dark Mode 😍: Most components in Nanasi UI are dark mode compatible.
 
-The recommended workflow is to run TSDX in one terminal:
+## Support Nanasi UI 💖
 
-```bash
-npm start # or yarn start
+By donating \$5 or more you can support the ongoing development of this project.
+We'll appreciate some support. Thank you to all our supporters! 🙏
+[[Contribute](https://)]
+
+## Get Started 🚀
+
+To use Nanasi UI components, all you need to do is install the
+`react-nanasi` package:
+
+```sh
+yarn add react-nanasi
 ```
 
-This builds to `/dist` and runs the project in watch mode so any edits you save inside `src` causes a rebuild to `/dist`.
+or
 
-Then run either Storybook or the example playground:
-
-### Storybook
-
-Run inside another terminal:
-
-```bash
-yarn storybook
+```
+npm i react-nanasi
 ```
 
-This loads the stories from `./stories`.
+## Usage 📚
 
-> NOTE: Stories should reference the components as if using the library, similar to the example playground. This means importing from the root project directory. This has been aliased in the tsconfig and the storybook webpack config as a helper.
+To start using the components,
 
-### Example
+Just import the component and use it as you would any other React component.
 
-Then run the example inside another:
+```jsx
+import { Button } from 'react-nanasi';
 
-```bash
-cd example
-npm i # or yarn to install dependencies
-npm start # or yarn start
-```
-
-The default example imports and live reloads whatever is in `/dist`, so if you are seeing an out of date component, make sure TSDX is running in watch mode like we recommend above. **No symlinking required**, we use [Parcel's aliasing](https://parceljs.org/module_resolution.html#aliases).
-
-To do a one-off build, use `npm run build` or `yarn build`.
-
-To run tests, use `npm test` or `yarn test`.
-
-## Configuration
-
-Code quality is set up for you with `prettier`, `husky`, and `lint-staged`. Adjust the respective fields in `package.json` accordingly.
-
-### Jest
-
-Jest tests are set up to run with `npm test` or `yarn test`.
-
-### Bundle analysis
-
-Calculates the real cost of your library using [size-limit](https://github.com/ai/size-limit) with `npm run size` and visulize it with `npm run analyze`.
-
-#### Setup Files
-
-This is the folder structure we set up for you:
-
-```txt
-/example
-  index.html
-  index.tsx       # test your component here in a demo app
-  package.json
-  tsconfig.json
-/src
-  index.tsx       # EDIT THIS
-/test
-  blah.test.tsx   # EDIT THIS
-/stories
-  Thing.stories.tsx # EDIT THIS
-/.storybook
-  main.js
-  preview.js
-.gitignore
-package.json
-README.md         # EDIT THIS
-tsconfig.json
-```
-
-#### React Testing Library
-
-We do not set up `react-testing-library` for you yet, we welcome contributions and documentation on this.
-
-### Rollup
-
-TSDX uses [Rollup](https://rollupjs.org) as a bundler and generates multiple rollup configs for various module formats and build settings. See [Optimizations](#optimizations) for details.
-
-### TypeScript
-
-`tsconfig.json` is set up to interpret `dom` and `esnext` types, as well as `react` for `jsx`. Adjust according to your needs.
-
-## Continuous Integration
-
-### GitHub Actions
-
-Two actions are added by default:
-
-- `main` which installs deps w/ cache, lints, tests, and builds on all pushes against a Node and OS matrix
-- `size` which comments cost comparison of your library on every pull request using [size-limit](https://github.com/ai/size-limit)
-
-## Optimizations
-
-Please see the main `tsdx` [optimizations docs](https://github.com/palmerhq/tsdx#optimizations). In particular, know that you can take advantage of development-only optimizations:
-
-```js
-// ./types/index.d.ts
-declare var __DEV__: boolean;
-
-// inside your code...
-if (__DEV__) {
-  console.log('foo');
+function Example() {
+  return <Button>I love Pineapples! </Button>;
 }
 ```
 
-You can also choose to install and use [invariant](https://github.com/palmerhq/tsdx#invariant) and [warning](https://github.com/palmerhq/tsdx#warning) functions.
+## Available Components 🎉
 
-## Module Formats
+- [Button](#button)
+- [Card](#card)
+- [Checkbox](#checkbox)
+- [wip] [Select](#select) Based on React Select
 
-CJS, ESModules, and UMD module formats are supported.
+## Example boilerplate 🔨
 
-The appropriate paths are configured in `package.json` and `dist/index.js` accordingly. Please report if any issues are found.
+- JavaScript Starter: wip
+- TypeScript Starter: wip
+- NextJS TypeScript Starter: wip
 
-## Deploying the Example Playground
+## Contributing 💪
 
-The Playground is just a simple [Parcel](https://parceljs.org) app, you can deploy it anywhere you would normally deploy that. Here are some guidelines for **manually** deploying with the Netlify CLI (`npm i -g netlify-cli`):
+Feel like contributing? That's awesome! We have a [contributing guide](./CONTRIBUTING.md) to help guide you.
 
-```bash
-cd example # if not already in the example folder
-npm run build # builds to dist
-netlify deploy # deploy the dist folder
-```
+Our docsite(wip) lives within [separate repo](/docs). If you're interested in contributing to the documentation, check out the [docsite contribution guide](https://).
 
-Alternatively, if you already have a git repo connected, you can set up continuous deployment with Netlify:
+## License 📝
 
-```bash
-netlify init
-# build command: yarn build && cd example && yarn && yarn build
-# directory to deploy: example/dist
-# pick yes for netlify.toml
-```
+This project is licensed under the [MIT License](#wip).
 
-## Named Exports
+<!-- ## Why Nanasi UI? 🤔 -->
 
-Per Palmer Group guidelines, [always use named exports.](https://github.com/palmerhq/typescript#exports) Code split inside your React app instead of your React library.
+## Work in progress 🚧
 
-## Including Styles
-
-There are many ways to ship styles, including with CSS-in-JS. TSDX has no opinion on this, configure how you like.
-
-For vanilla CSS, you can include it at the root directory and add it to the `files` section in your `package.json`, so that it can be imported separately by your users and run through their bundler's loader.
-
-## Publishing to NPM
-
-We recommend using [np](https://github.com/sindresorhus/np).
-
-## Usage with Lerna
-
-When creating a new package with TSDX within a project set up with Lerna, you might encounter a `Cannot resolve dependency` error when trying to run the `example` project. To fix that you will need to make changes to the `package.json` file _inside the `example` directory_.
-
-The problem is that due to the nature of how dependencies are installed in Lerna projects, the aliases in the example project's `package.json` might not point to the right place, as those dependencies might have been installed in the root of your Lerna project.
-
-Change the `alias` to point to where those packages are actually installed. This depends on the directory structure of your Lerna project, so the actual path might be different from the diff below.
-
-```diff
-   "alias": {
--    "react": "../node_modules/react",
--    "react-dom": "../node_modules/react-dom"
-+    "react": "../../../node_modules/react",
-+    "react-dom": "../../../node_modules/react-dom"
-   },
-```
-
-An alternative to fixing this problem would be to remove aliases altogether and define the dependencies referenced as aliases as dev dependencies instead. [However, that might cause other problems.](https://github.com/palmerhq/tsdx/issues/64)
+This project is a work in progress. As such, there are a few things that are missing. We're working on it! 🚧
