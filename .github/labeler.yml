@@ -1,6 +1,19 @@
 dependencies:
   - yarn.lock
 
+readme:
+  - README.md
+
+documentation:
+  - docs/*
+
+examples:
+  - example/*
+
+ci:
+  - .github/*
+  - .github/**/*
+
 test:
   - src/test/**/*
   - src/types/tests/**/*
