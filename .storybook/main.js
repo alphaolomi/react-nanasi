@@ -1,8 +1,9 @@
 module.exports = {
-  stories: ['../stories/**/*.stories.@(ts|tsx|js|jsx|mdx)'],
+  stories: ['../stories/**/*.stories.mdx', '../stories/**/*.stories.@(js|jsx|ts|tsx)'],
   addons: ['@storybook/addon-links', '@storybook/addon-essentials'],
-  // https://storybook.js.org/docs/react/configure/typescript#mainjs-configuration
-  typescript: {
-    check: true, // type-check stories during Storybook build
-  }
+  framework: '@storybook/react',
+  core: {
+    builder: 'webpack5',
+  },
+  typescript: { reactDocgen: false },
 };
