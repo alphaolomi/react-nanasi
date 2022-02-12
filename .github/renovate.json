@@ -1,5 +1,6 @@
 {
   "separateMajorMinor": true,
+  "dependencyDashboard": false,
   "extends": [
     ":preserveSemverRanges",
     "config:base"
