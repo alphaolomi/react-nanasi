@@ -6,7 +6,7 @@ Nanasi UI provides a set of simple, reusable, and composable React components th
 
 ## Looking for the documentation? 📚
 
-Latest version => wip
+Latest Components Documentation on [Chromatic](https://main--62077887ca459c003a958107.chromatic.com/)
 
 ## Features 🚀
 
