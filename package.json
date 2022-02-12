@@ -18,7 +18,8 @@
     "prepare": "tsdx build",
     "size": "size-limit",
     "storybook": "start-storybook -p 6006",
-    "test": "tsdx test --passWithNoTests"
+    "test": "tsdx test --passWithNoTests",
+    "chromatic": "yarn chromatic"
   },
   "husky": {
     "hooks": {
@@ -42,6 +43,7 @@
     "@types/react": "^17.0.38",
     "@types/react-dom": "^17.0.11",
     "babel-loader": "^8.2.3",
+    "chromatic": "^6.4.3",
     "husky": "^7.0.4",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
